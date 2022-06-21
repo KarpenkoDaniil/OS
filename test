@@ -1,0 +1,44 @@
+n=0
+a=1
+b=2
+c=3
+d=4
+e=5
+until [ “$n” –ge “$e” ]
+	do
+		echo “Меню”
+		echo “----------------------------------”
+		echo “1. Информация о разработчике”
+		echo “2. Вычислить значение выражения”
+		echo “3. Удалить содержимое папки”
+		echo “4. Найти файл”
+		echo “5. Выход”
+		echo “----------------------------------”
+		read n
+		if [ “$n” –eq “$a” ]
+		then echo “Ёвженко Ю.Д., ИТИ-12”
+		elif [ “$n” -eq “$b” ]
+		then echo “Введите номер компьютера”
+		        read f
+		        echo “Введите вариант”
+		        read v
+		        echo “Введите возраст”
+		        read g
+		        x=$(( $f*$g + $v*$g ))
+		        echo “Ответ $x”
+		elif [ “$n” –eq “$c” ]
+		then echo “Введите название каталога”
+		        read s
+		        for val in $(ls $s)
+		        do
+			mv ~/Desktop/OC/$s/$val ~/Desktop/OC/tmp/
+		        done
+		elif [ “$n” –eq “$d” ]
+		then echo “Введите название файла”
+		        read filename
+		        find $fileName*
+		elif [ “$n” –eq “$e” ]
+		then echo “Конец выполнения программы”
+		        break
+		fi
+	done
